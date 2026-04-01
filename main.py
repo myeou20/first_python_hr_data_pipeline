@@ -48,7 +48,7 @@ def median(data: list) -> float:
     return round(med, 2)
 
 
-def range(data: list) -> float:
+def data_range(data: list) -> float:
     """
     """
     max_value = data[0]
@@ -98,12 +98,16 @@ def run(file: str):
     # calculate the average, median, and range of this file using the functions you've wrote
     avg = average(cleaned_list)
     med = median(cleaned_list)
+    rng = data_range(cleaned_list)
 
     
 
     # print out your data quality measure to the console
     print("average heart rate:", avg)
-    print("median hearth rate:", med)
+    print("median heart rate:", med)
+    print("range:", rng)
+
+    return avg, med, rng
   
 
     # print out your descriptive statistics to the console
